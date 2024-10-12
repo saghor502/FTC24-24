@@ -35,6 +35,21 @@ public class BasicTlop extends LinearOpMode {
             }else{
                 robot.moveTurret(0);
             }
+
+            if(gamepad1.a){
+                robot.claw(1);
+            }else if(gamepad1.y){
+                robot.claw(-1);
+            }else{
+                robot.claw(0);
+            }
+            if(gamepad1.x){
+                robot.turnClaw(-1);
+            }else if(gamepad1.b){
+                robot.turnClaw(1);
+            }else{
+                robot.turnClaw(0);
+            }
         }
     }
 }
